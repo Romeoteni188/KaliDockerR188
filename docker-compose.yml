@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  auditoria:
+    build: .
+    image: auditoria:latest
+    container_name: auditoria
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./wordlists:/home/pentest/wordlists:ro
+      - ./tools:/home/pentest/tools
+    # network_mode: "host" # <-- activa solo si necesitas acceso a la red host (cuidado con seguridad)
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+    environment:
+      - TZ=Etc/UTC
+    restart: "no"
+
