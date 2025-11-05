@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   auditoria:
     build: .
@@ -7,9 +8,9 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - ./wordlists:/home/pentest/wordlists:ro
-      - ./tools:/home/pentest/tools
-    # network_mode: "host" # <-- activa solo si necesitas acceso a la red host (cuidado con seguridad)
+      - ./wordlists:/root/wordlists:ro
+      - ./tools:/root/tools
+    # network_mode: "host" # ← activa solo si necesitas acceso a la red host (más realismo, menos aislamiento)
     cap_add:
       - NET_RAW
       - NET_ADMIN
