@@ -1,7 +1,7 @@
 ARG KALI_IMAGE=kalilinux/kali-rolling
 FROM ${KALI_IMAGE} AS base
 
-LABEL maintainer="Erwin Romeo <tu@email>"
+LABEL maintainer=" <mio2025@email>"
 LABEL org.opencontainers.image.title="auditoria-docker"
 LABEL org.opencontainers.image.description="Imagen Docker para auditorías y pentesting (nmap, ffuf, sqlmap, nikto, wpscan, hydra, dirb, whatweb, metasploit...)."
 
